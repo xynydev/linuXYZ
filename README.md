@@ -1,4 +1,4 @@
-# Starting point
+# linuXYZ
 
 [![build-ublue](https://github.com/einohr/linuxyz/actions/workflows/build.yml/badge.svg)](https://github.com/einohr/linuxyz/actions/workflows/build.yml)
 
