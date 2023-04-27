@@ -12,7 +12,7 @@ base-image: ghcr.io/ublue-os/kinoite-nvidia
 # to the next major version assuming the image you're using as your base container
 # builds with the tag (all uBlue images do this).
 
-fedora-version: latest
+fedora-version: 37
 
 # This description will be visible in the container metadata
 description: My personal uBlue image. Make your own! https://ublue.it/making-your-own/
@@ -26,7 +26,8 @@ scripts:
 # this is the proper way to add copr repos to your image
 extrarepos:
   # example:
-  # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-37/atim-starship-fedora-37.repo
+  - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-37/atim-starship-fedora-37.repo
+  - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
 
 # These rpms will be installed from the fedora repository
 # using rpm-ostree and will be preinstalled in the final image
