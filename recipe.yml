@@ -6,7 +6,7 @@ name: linuxyz
 # The native container image to build on top of
 # Warning: Non-uBlue images might function unexpectly
 
-base-image: ghcr.io/ublue-os/kinoite-main
+base-image: ghcr.io/ublue-os/kinoite-nvidia
 # What fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated
 # to the next major version assuming the image you're using as your base container
