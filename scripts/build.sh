@@ -13,7 +13,7 @@ get_yaml_string() {
 }
 
 # Automatically determine which Fedora version we're building.
-FEDORA_VERSION="$(cat /usr/lib/os-release | grep '^VERSION_ID=' | head -1 | sed 's,^VERSION_ID=,,')"
+FEDORA_VERSION="$(cat /usr/lib/os-release | grep -Po '(?<=VERSION_ID=)\d+')"
 
 # Read configuration variables.
 BASE_IMAGE="$(get_yaml_string '.base-image')"
@@ -51,21 +51,21 @@ run_scripts() {
 }
 run_scripts "pre"
 
-# Remove RPMs.
-get_yaml_array remove_rpms '.rpm.remove[]'
-if [[ ${#remove_rpms[@]} -gt 0 ]]; then
-    echo "-- Removing RPMs defined in recipe.yml --"
-    echo "Removing: ${remove_rpms[@]}"
-    rpm-ostree override remove "${remove_rpms[@]}"
-    echo "---"
-fi
-
 # Install RPMs.
 get_yaml_array install_rpms '.rpm.install[]'
 if [[ ${#install_rpms[@]} -gt 0 ]]; then
     echo "-- Installing RPMs defined in recipe.yml --"
     echo "Installing: ${install_rpms[@]}"
     rpm-ostree install "${install_rpms[@]}"
+    echo "---"
+fi
+
+# Remove RPMs.
+get_yaml_array remove_rpms '.rpm.remove[]'
+if [[ ${#remove_rpms[@]} -gt 0 ]]; then
+    echo "-- Removing RPMs defined in recipe.yml --"
+    echo "Removing: ${remove_rpms[@]}"
+    rpm-ostree override remove "${remove_rpms[@]}"
     echo "---"
 fi
 
