@@ -5,7 +5,7 @@ name: linuxyz
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
-base-image: ghcr.io/ublue-os/kinoite-nvidia
+base-image: ghcr.io/ublue-os/silverblue-nvidia
 
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
@@ -67,19 +67,26 @@ rpm:
     - python
     - rsync
     - syncthing
-    # - btop
     - kitty
     - starship
-    - bismuth
     - zsh
     - fish
-    # - fzf
     - rEFInd
-    # - ulauncher
     - qemu
     - libvirt
     - virt-manager
     - tailscale
+
+    - gnome-shell-extension-pop-shell
+    - xprop
+    - gnome-shell-extension-burn-my-windows 
+    - gnome-shell-extension-blur-my-shell
+
+    # - bismuth
+
+    - ulauncher
+    # - fzf
+    # - btop
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).

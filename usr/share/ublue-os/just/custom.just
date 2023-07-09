@@ -10,4 +10,13 @@ setup-flatpaks:
       flatpak install --user --noninteractive flathub $pkg; \
   done
 
+# https://github.com/essembeh/gnome-extensions-cli
+setup-gext:
+  # vitals
+  gext install 1460
+  # gsconnect
+  gext install 1319
+  # arcmenu
+  gext install 3628
+
 # Include some of your custom scripts here! 
