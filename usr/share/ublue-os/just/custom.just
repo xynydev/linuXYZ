@@ -12,6 +12,7 @@ setup-flatpaks:
 
 # https://github.com/essembeh/gnome-extensions-cli
 setup-gext:
+  pip install --upgrade gnome-extensions-cli
   # vitals
   gext install 1460
   # gsconnect
