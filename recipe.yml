@@ -77,6 +77,10 @@ rpm:
     - virt-manager
     - tailscale
 
+    - pcmanfm
+    - thunar
+    - nemo
+
     - gnome-shell-extension-pop-shell
     - xprop
     - gnome-shell-extension-burn-my-windows 
