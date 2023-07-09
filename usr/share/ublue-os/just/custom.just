@@ -23,5 +23,7 @@ setup-gext:
   gext install 4679
   # user themes
   gext install 19
+  # space bar
+  gext install 5090
 
 # Include some of your custom scripts here! 
