@@ -21,5 +21,7 @@ setup-gext:
   gext install 3628
   # burn-my-windows
   gext install 4679
+  # user themes
+  gext install 19
 
 # Include some of your custom scripts here! 
