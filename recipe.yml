@@ -67,15 +67,15 @@ rpm:
     - python
     - rsync
     - syncthing
-    - btop
+    # - btop
     - kitty
     - starship
     - bismuth
     - zsh
     - fish
-    - fzf
+    # - fzf
     - rEFInd
-    - ulauncher
+    # - ulauncher
     - qemu
     - libvirt
     - virt-manager
