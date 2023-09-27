@@ -38,6 +38,7 @@ modules:
         - qemu
         - libvirt
         - virt-manager
+        - virt-install
         - tailscale
 
         - pcmanfm
