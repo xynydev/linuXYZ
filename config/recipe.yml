@@ -90,6 +90,7 @@ modules:
         - Terminus
         - JetBrainsMono
         - NerdFontsSymbolsOnly
+        - SpaceMono
       google-fonts:
         - Roboto
         - Open Sans
