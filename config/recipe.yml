@@ -45,9 +45,10 @@ modules:
         - thunar
         - nemo
 
-        - gnome-shell-extension-pop-shell
-        - xprop
+        # - gnome-shell-extension-pop-shell
+        # - xprop
         - gnome-shell-extension-blur-my-shell
+        - gnome-shell-extension-forge 
 
         # - bismuth
 
