@@ -48,7 +48,7 @@ modules:
         # - gnome-shell-extension-pop-shell
         # - xprop
         - gnome-shell-extension-blur-my-shell
-        - gnome-shell-extension-forge 
+        # - gnome-shell-extension-forge 
 
         # - bismuth
 
