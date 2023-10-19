@@ -19,3 +19,5 @@ setup-gext:
   gext install 5090
   # forge
   gext install 4481
+  # rounded window corners
+  gext install 5237
