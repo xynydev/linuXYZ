@@ -17,3 +17,5 @@ setup-gext:
   gext install 19
   # space bar
   gext install 5090
+  # forge
+  gext install 4481
