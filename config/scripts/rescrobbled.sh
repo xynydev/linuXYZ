@@ -7,7 +7,7 @@ curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/In
     | xargs wget -o /usr/bin/rescrobbled
 
 echo "Downloading rescrobbled systemd unit"
-wget https://raw.githubusercontent.com/InputUsername/rescrobbled/master/rescrobbled.service -o /usr/lib/systemd/user/rescrobbled.service
+curl https://raw.githubusercontent.com/InputUsername/rescrobbled/master/rescrobbled.service > Downloads/rescrobbled.service
 
 echo "Enabling rescrobbled systemd unit"
 systemctl enable --global -f rescrobbled.service
