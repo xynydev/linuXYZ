@@ -4,7 +4,7 @@ set -oue pipefail
 echo "Downloading latest rescrobbled binary"
 curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/InputUsername/rescrobbled/releases/latest \
     | jq .assets[0].browser_download_url \
-    | xargs curl > /usr/bin/rescrobbled
+    | xargs wget -O /usr/bin/rescrobbled
 chmod +x /usr/bin/rescrobbled
 
 echo "Downloading rescrobbled systemd unit"
