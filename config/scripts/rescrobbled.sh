@@ -8,7 +8,8 @@ curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/In
 chmod +x /usr/bin/rescrobbled
 
 echo "Downloading rescrobbled systemd unit"
-curl https://raw.githubusercontent.com/InputUsername/rescrobbled/master/rescrobbled.service > /usr/lib/systemd/user/rescrobbled.service
+curl https://raw.githubusercontent.com/InputUsername/rescrobbled/master/rescrobbled.service > /tmp/rescrobbled.service
+sed 's/ExecStart=.*/ExecStart=\/usr\/bin\/rescrobbled/' /tmp/rescrobbled.service > /usr/lib/systemd/user/rescrobbled.service 
 
 echo "Enabling rescrobbled systemd unit"
 systemctl enable --global -f rescrobbled.service
