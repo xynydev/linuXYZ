@@ -83,6 +83,11 @@ modules:
       - rescrobbled.sh
       - signing.sh
 
+  - type: systemd
+    system:
+      enabled:
+        - mount-on-boot.service
+
   - type: fonts
     fonts:
       nerd-fonts:
