@@ -21,3 +21,11 @@ setup-gext:
   gext install 4481
   # rounded window corners
   gext install 5237
+
+workspace-shortcuts:
+  #!/usr/bin/env bash
+  for i in {1..9}; do
+      gsettings set org.gnome.shell.keybindings switch-to-application-$i '[]'
+      gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Super>$i']"
+      gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Shift><Super>$i']"
+  done
