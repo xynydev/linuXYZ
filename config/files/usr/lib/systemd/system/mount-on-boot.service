@@ -1,0 +1,10 @@
+[Unit]
+Description=Hack to mount all network shares automagically.
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=mount -a
+
+[Install]
+WantedBy=multi-user.target

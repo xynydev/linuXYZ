@@ -1,11 +1,11 @@
-# Starting point
+# linuXYZ
 
 > **Warning**
 > Startingpoint was recently rewritten, and this version is considered a "1.0" *semi-*stable release.
 > There are breaking changes between this and the previous version.
 > If you are merging changes from the previous (v0) version, please refer to [the heads-up blog post](https://universal-blue.org/blog/2023/09/02/startingpoint-rewrite-heads-up-what-you-need-to-know/).
 
-[![build-ublue](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml)
+[![build-ublue](https://github.com/einohr/linuxyz/actions/workflows/build.yml/badge.svg)](https://github.com/einohr/linuxyz/actions/workflows/build.yml)
 
 This is a constantly updating template repository for creating [a native container image](https://fedoraproject.org/wiki/Changes/OstreeNativeContainerStable) designed to be customized however you want. GitHub will build your image for you, and then host it for you on [ghcr.io](https://github.com/features/packages). You then just tell your computer to boot off of that image. GitHub keeps 90 days worth image backups for you, thanks Microsoft!
 
@@ -20,7 +20,7 @@ Don't worry, it only requires some basic knowledge about using the terminal and 
 After setup, it is recommended you update this README to describe your custom image.
 
 > **Note**
-> Everywhere in this repository, make sure to replace `ublue-os/startingpoint` with the details of your own repository. Unless you used one of the automatic repository setup tools in which case the previous repo identifier should already be your repo's details.
+> Everywhere in this repository, make sure to replace `ublue-os/startingpoint` with the details of your own repository. Unless you used [`create-ublue-image`](https://github.com/EinoHR/create-ublue-image), in which case the previous repo identifier should already be your repo's details.
 
 > **Warning**
 > To start, you *must* create a branch called `live` which is exclusively for your customizations. That is the **only** branch the GitHub workflow will deploy to your container registry. Don't make any changes to the original "template" branch. It should remain untouched. By using this branch structure, you ensure a clear separation between your own "published image" branch, your development branches, and the original upstream "template" branch. Periodically sync and fast-forward the upstream "template" branch to the most recent revision. Then, simply rebase your `live` branch onto the updated template to effortlessly incorporate the latest improvements into your own repository, without the need for any messy, manual "merge commits".
@@ -46,7 +46,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/startingpoint:latest
+  sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/xynydev/linuxyz:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -54,7 +54,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/startingpoint:latest
+  sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/xynydev/linuxyz:latest
   ```
 - Reboot again to complete the installation
   ```
@@ -64,7 +64,7 @@ To rebase an existing Silverblue/Kinoite installation to the latest build:
 This repository builds date tags as well, so if you want to rebase to a particular day's build:
 
 ```
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/startingpoint:20230403
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/xynydev/linuxyz:20230403
 ```
 
 This repository by default also supports signing.
@@ -95,4 +95,25 @@ Then type `just` to list the just recipes available.
 
 The file `/usr/share/ublue-os/just/custom.just` is intended for the custom just commands (recipes) you wish to include in your image. By default, it includes the justfiles from [`ublue-os/bling`](https://github.com/ublue-os/bling), if you wish to disable that, you need to just remove the line that includes bling.just.
 
-See [the just-page in the Universal Blue documentation](https://universal-blue.org/guide/just/) for more information.
+- `just` - Show all tasks, more will be added in the future
+- `just bios` - Reboot into the system bios (Useful for dualbooting)
+- `just changelogs` - Show the changelogs of the pending update
+- Set up distroboxes for the following images:
+  - `just distrobox-boxkit`
+  - `just distrobox-debian`
+  - `just distrobox-opensuse`
+  - `just distrobox-ubuntu`
+- `just setup-flatpaks` - Install all of the flatpaks declared in recipe.yml
+- `just setup-gaming` - Install Steam, Heroic Game Launcher, OBS Studio, Discord, Boatswain, Bottles, and ProtonUp-Qt. MangoHud is installed and enabled by default, hit right Shift-F12 to toggle
+- `just nix-me-up` - Install Nix with dnkmmr69420's Nix Silverblue install script
+- `just update` - Update rpm-ostree, flatpaks, and distroboxes in one command
+
+Check the [just website](https://just.systems) for tips on modifying and adding your own recipes.
+
+## Verification
+
+These images are signed with sisgstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
+
+    cosign verify --key cosign.pub ghcr.io/xynydev/linuxyz
+
+If you're forking this repo, the uBlue website has [instructions](https://ublue.it/making-your-own/) for setting up signing properly.
