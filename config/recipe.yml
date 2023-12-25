@@ -75,11 +75,40 @@ modules:
       # - flatpaksync # allows synchronization of user-installed flatpaks, see separate documentation section
 
 
-  - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
-                #  will be installed and set up
-    custom-flatpaks: # this section is optional
-      # - Celluloid: io.github.celluloid_player.Celluloid
-      # - Krita: org.kde.krita
+  - type: default-flatpaks
+    user:
+      install:
+        - com.brave.Browser
+        - com.github.GradienceTeam.Gradience.Devel
+        - com.github.tchx84.Flatseal
+        - hu.kramo.Cartridges
+        - io.itch.itch
+        - com.usebottles.bottles
+        - org.prismlauncher.PrismLauncher
+        - fr.handbrake.ghb
+        - io.mpv.Mpv
+        - com.logseq.Logseq
+        - md.obsidian.Obsidian
+        - com.obsproject.Studio
+        - com.google.AndroidStudio
+        - com.jetbrains.IntelliJ-IDEA-Community
+        - io.github.dweymouth.supersonic
+        - io.gitlab.librewolf-community
+        - nl.hjdskes.gcolor3
+        - org.audacityteam.Audacity
+        - org.blender.Blender
+        - org.kde.kdenlive
+        - org.shotcut.Shotcut
+        - org.kde.krita
+        - org.fedoraproject.MediaWriter
+        - org.freedesktop.Piper
+        - org.gnome.Loupe
+        - org.gnome.World.PikaBackup
+        - org.gtk.Gtk3theme.Catppuccin-red
+        - org.gtk.Gtk3theme.adw-gtk3
+        - org.gtk.Gtk3theme.adw-gtk3-dark
+        - org.musicbrainz.Picard
+        - org.speedcrunch.SpeedCrunch
 
   - type: script
     scripts:
