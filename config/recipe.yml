@@ -83,9 +83,9 @@ modules:
         - com.github.tchx84.Flatseal
         - hu.kramo.Cartridges
         - io.itch.itch
-        - com.valvesoftware.Steam
-        - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
-        - io.github.Foldex.AdwSteamGtk
+        # - com.valvesoftware.Steam
+        # - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+        # - io.github.Foldex.AdwSteamGtk
         - com.usebottles.bottles
         - org.prismlauncher.PrismLauncher
         - fr.handbrake.ghb
