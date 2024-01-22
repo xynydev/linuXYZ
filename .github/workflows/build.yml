@@ -28,6 +28,6 @@ jobs:
           - recipe.yml
     steps:
       - name: Build Custom Image
-        uses: blue-build/github-action@v1
+        uses: blue-build/github-action@v0
         with:
           recipe: ${{ matrix.recipe }}
