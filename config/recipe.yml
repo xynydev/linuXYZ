@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: startingpoint
+name: linuxyz
 # description will be included in the image's metadata
-description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
+description: My personal uBlue image. Make your own! https://ublue.it/making-your-own/
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 39 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/silverblue-nvidia
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -22,37 +22,106 @@ modules:
 
   - type: rpm-ostree
     repos:
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       # - micro
       # - starship
+        - python
+        - rsync
+        - syncthing
+        - kitty
+        - starship
+        - zsh
+        - fish
+        - rEFInd
+        - qemu
+        - libvirt
+        - virt-manager
+        - virt-install
+        - tailscale
+
+        - pcmanfm
+        - thunar
+        - nemo
+
+        # - gnome-shell-extension-pop-shell
+        # - xprop
+        - gnome-shell-extension-blur-my-shell
+        # - gnome-shell-extension-forge 
+
+        # - bismuth
+
+        # - ulauncher
+        # - fzf
+        # - btop
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
   - type: default-flatpaks
-    notify: true   # Send notification after install/uninstall is finished (true/false)
-    system:
-      # If no repo information is specified, Flathub will be used by default
-      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      repo-name: flathub
-      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
-      install:
-      # - org.gnome.Loupe
-      # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
-      # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08).
-      # Only normal flatpak applications are (like Floorp Lightning web browser in this example).
-      # Multiple install of same flatpaks with different branches is not supported.
-      remove:
-      # - org.gnome.eog
-      #
-    # A flatpak repo can also be added without having to install flatpaks,
-    # as long as one of the repo- fields is present
     user:
-      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      repo-name: flathub
-
+      install:
+        - com.brave.Browser
+        - com.github.GradienceTeam.Gradience.Devel
+        - com.github.tchx84.Flatseal
+        - hu.kramo.Cartridges
+        - io.itch.itch
+        # - com.valvesoftware.Steam
+        # - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+        # - io.github.Foldex.AdwSteamGtk
+        - com.usebottles.bottles
+        - org.prismlauncher.PrismLauncher
+        - fr.handbrake.ghb
+        - io.mpv.Mpv
+        - com.logseq.Logseq
+        - md.obsidian.Obsidian
+        - com.obsproject.Studio
+        - com.google.AndroidStudio
+        - com.jetbrains.IntelliJ-IDEA-Community
+        - io.github.dweymouth.supersonic
+        - io.gitlab.librewolf-community
+        - nl.hjdskes.gcolor3
+        - org.audacityteam.Audacity
+        - org.blender.Blender
+        - org.kde.kdenlive
+        - org.shotcut.Shotcut
+        - org.kde.krita
+        - org.fedoraproject.MediaWriter
+        - org.freedesktop.Piper
+        - org.gnome.Loupe
+        - org.gnome.World.PikaBackup
+        - org.gtk.Gtk3theme.Catppuccin-red
+        - org.gtk.Gtk3theme.adw-gtk3
+        - org.gtk.Gtk3theme.adw-gtk3-dark
+        - org.musicbrainz.Picard
+        - org.speedcrunch.SpeedCrunch
+        
   - type: script
     scripts:
-      # this sets up the proper policy & signing files for signed images to work
-      - signing.sh
+      - nautilus-open-any-terminal.sh
+      - rescrobbled.sh
+      - signing.sh # this sets up the proper policy & signing files for signed images to work
+
+  - type: systemd
+    system:
+      enabled:
+        - mount-on-boot.service
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode # don't add "Nerd Font" suffix.
+        - Hack
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+        - SpaceMono
+      google-fonts:
+        - Roboto
+        - Open Sans
+        - Work Sans
+        - Outfit
+        - Space Grotesk
+
