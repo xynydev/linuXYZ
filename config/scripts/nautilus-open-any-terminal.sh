@@ -2,8 +2,8 @@
 
 set -oue pipefail
 
-echo "Installing nautilus-python & gettext"
-rpm-ostree install nautilus-python gettext
+echo "Installing nautilus-python & gettext & make"
+rpm-ostree install nautilus-python gettext make
 
 echo "Installing nautilus-open-any-terminal"
 cd /tmp/
