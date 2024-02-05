@@ -9,7 +9,8 @@ echo "Installing nautilus-open-any-terminal"
 cd /tmp/
 git clone https://github.com/Stunkymonkey/nautilus-open-any-terminal.git
 cd nautilus-open-any-terminal
-./tools/update-extension.sh install
+make
+make install schema 
 
 echo "Setting default terminal to kitty"
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty
