@@ -23,6 +23,7 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%OS_VERSION%/peterwu-rendezvous-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       # - micro
@@ -49,7 +50,8 @@ modules:
         # - xprop
         - gnome-shell-extension-blur-my-shell
         # - gnome-shell-extension-forge 
-        - python3-pip
+        - python3-pip # gext
+        - bibata-cursor-themes
 
         # - bismuth
 
@@ -125,4 +127,8 @@ modules:
         - Work Sans
         - Outfit
         - Space Grotesk
+
+  - type: gschema-overrides
+    include:
+      - zz1-linuxyz.gschema.override
 
