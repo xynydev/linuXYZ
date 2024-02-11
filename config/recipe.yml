@@ -49,6 +49,7 @@ modules:
         # - xprop
         - gnome-shell-extension-blur-my-shell
         # - gnome-shell-extension-forge 
+        - python3-pip
 
         # - bismuth
 
