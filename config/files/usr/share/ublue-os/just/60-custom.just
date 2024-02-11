@@ -5,20 +5,31 @@ setup-gext:
   pip install --upgrade gnome-extensions-cli
   # vitals
   gext install 1460
+
   # gsconnect
   gext install 1319
-  # arcmenu
-  gext install 3628
+
+  ## arcmenu
+  # gext install 3628
+
   # burn-my-windows
   gext install 4679
+
   # user themes
   gext install 19
+
   # space bar
-  gext install 5090
+  # gext install 5090
+
   # forge
-  gext install 4481
+  # gext install 4481
+
+  # paperwm
+  gext install 6099
+
   # rounded window corners
   gext install 5237
+
 
 workspace-shortcuts:
   #!/usr/bin/env bash
