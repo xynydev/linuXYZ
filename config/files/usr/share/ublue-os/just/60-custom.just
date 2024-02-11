@@ -30,6 +30,9 @@ setup-gext:
   # rounded window corners
   gext install 5237
 
+  # panel date format
+  gext install 1462
+
 
 workspace-shortcuts:
   #!/usr/bin/env bash
