@@ -26,5 +26,7 @@ move-to-workspace-5 = ['<Shift><Super>5', '<Shift><Super>6', '<Shift><Super>7', 
 [org.gnome.desktop.interface]
 font-name = 'Outfit 10'
 monospace-font-name = 'SpaceMono Nerd Font Mono 10'
-titlebar-font = 'Outfit 11'
 cursor-theme = 'Bibata-Modern-Ice'
+
+[org.gnome.desktop.wm.preferences]
+titlebar-font = 'Outfit 11'
