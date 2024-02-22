@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -oue pipefail
 
+mkdir -p /boot/EFI/refind
 cd /boot/EFI/refind
 mkdir themes | true
 cd themes
