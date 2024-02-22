@@ -104,7 +104,7 @@ modules:
     scripts:
       - nautilus-open-any-terminal.sh
       # - rescrobbled.sh
-      - youtube-music-app.sh
+      # - youtube-music-app.sh
       - refind-catppuccin-theme.sh
       - signing.sh # this sets up the proper policy & signing files for signed images to work
 
