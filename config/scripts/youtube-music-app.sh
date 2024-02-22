@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -xoue pipefail
+set -oue pipefail
 
 cd /tmp
 
