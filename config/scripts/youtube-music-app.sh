@@ -13,4 +13,4 @@ RPM_FILENAME=$(yq '.files[2].url' latest-linux.yml)
 VERSION_TAG="v$(yq '.version' latest-linux.yml)"
 RPM_DOWNLOAD_URL="https://github.com/th-ch/youtube-music/releases/download/$VERSION_TAG/$RPM_FILENAME"
 
-rpm-ostree install "$RPM_DOWNLOAD_URL"
+rpm-ostree install "$RPM_DOWNLOAD_URL" libuuid
