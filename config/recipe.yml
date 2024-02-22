@@ -103,7 +103,8 @@ modules:
   - type: script
     scripts:
       - nautilus-open-any-terminal.sh
-      - rescrobbled.sh
+      # - rescrobbled.sh
+      - youtube-music-app.sh
       - signing.sh # this sets up the proper policy & signing files for signed images to work
 
   - type: systemd
