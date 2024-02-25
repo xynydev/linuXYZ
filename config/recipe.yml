@@ -106,7 +106,6 @@ modules:
       # - rescrobbled.sh
       # - youtube-music-app.sh
       # - refind-catppuccin-theme.sh
-      - signing.sh # this sets up the proper policy & signing files for signed images to work
 
   - type: systemd
     system:
@@ -134,3 +133,4 @@ modules:
     include:
       - zz1-linuxyz.gschema.override
 
+  - type: signing

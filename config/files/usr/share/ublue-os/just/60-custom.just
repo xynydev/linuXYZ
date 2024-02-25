@@ -1,5 +1,3 @@
-# Include some of your custom scripts here!
-
 # https://github.com/essembeh/gnome-extensions-cli
 setup-gext:
   pip install --upgrade gnome-extensions-cli
