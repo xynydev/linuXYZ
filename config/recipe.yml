@@ -135,7 +135,7 @@ modules:
 
   - type: akmods
     source: ghcr.io/xynydev/modules
-    nvidia-driver: 550
+    nvidia-driver: v550
     install:
       - openrgb
 
