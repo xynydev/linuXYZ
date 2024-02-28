@@ -10,6 +10,12 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
+  - type: akmods
+    source: ghcr.io/xynydev/modules
+    nvidia-driver: 545
+    install:
+      - openrgb
+
   - type: files
     files:
       - usr: /usr # copy static configurations
@@ -132,11 +138,5 @@ modules:
   - type: gschema-overrides
     include:
       - zz1-linuxyz.gschema.override
-
-  - type: akmods
-    source: ghcr.io/xynydev/modules
-    nvidia-driver: 545
-    install:
-      - openrgb
 
   - type: signing
