@@ -133,4 +133,10 @@ modules:
     include:
       - zz1-linuxyz.gschema.override
 
+  - type: akmods
+    source: ghcr.io/xynydev/modules
+    nvidia-driver: 550
+    install:
+      - openrgb
+
   - type: signing
