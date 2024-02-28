@@ -4,17 +4,17 @@ name: linuxyz
 description: My personal uBlue image. Make your own! https://ublue.it/making-your-own/
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/silverblue-nvidia
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: akmods
-    source: ghcr.io/xynydev/modules
-    nvidia-driver: 545
-    install:
-      - openrgb
+  # - type: akmods
+  #   source: ghcr.io/xynydev/modules
+  #   nvidia-driver: 545
+  #   install:
+  #     - openrgb
 
   - type: files
     files:
