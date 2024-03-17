@@ -16,6 +16,11 @@ modules:
   #   install:
   #     - openrgb
 
+  - type: script
+    source: ghcr.io/blue-build/modules:124-featscript-add-snippet-support-for-script-module
+    snippets:
+      - echo "test 12342 hello world"
+
   - type: files
     files:
       - usr: /usr # copy static configurations
