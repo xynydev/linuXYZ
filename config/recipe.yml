@@ -117,7 +117,7 @@ modules:
       # - rescrobbled.sh
       # - youtube-music-app.sh
       # - refind-catppuccin-theme.sh
-      - figma.sh
+      # - figma.sh
 
   - type: systemd
     system:
