@@ -141,6 +141,8 @@ modules:
         - Work Sans
         - Outfit
         - Space Grotesk
+        - Inter
+        - Atkinson Hyperlegible
 
   - type: gschema-overrides
     include:
