@@ -77,7 +77,7 @@ modules:
     user:
       install:
         - com.brave.Browser
-        - com.github.GradienceTeam.Gradience.Devel
+        - com.github.GradienceTeam.Gradience
         - com.github.tchx84.Flatseal
         - hu.kramo.Cartridges
         - io.itch.itch
