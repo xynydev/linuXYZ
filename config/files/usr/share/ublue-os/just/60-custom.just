@@ -30,6 +30,7 @@ setup-gext:
 
   # panel date format
   gext install 1462
+  dconf write /org/gnome/shell/extensions/panel-date-format/format "'%F %R'"
 
 
 workspace-shortcuts:
