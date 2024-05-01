@@ -24,7 +24,7 @@ modules:
                   #
                   # configuration you wish to end up in /etc/ on the booted system
                   # should be added into /usr/etc/ as that is the proper "distro"
-                  # config directory on ostree. Read more in the files module's README
+                  # config directory on ostree. Read morchoree in the files module's README
 
   - type: script
     snippets:
@@ -53,10 +53,6 @@ modules:
         - virt-manager
         - virt-install
         - tailscale
-
-        - pcmanfm
-        - thunar
-        - nemo
 
         # - gnome-shell-extension-pop-shell
         # - xprop
