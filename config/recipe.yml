@@ -37,35 +37,48 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%OS_VERSION%/peterwu-rendezvous-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
+        # editors
         - micro
         - codium
+
+        # termbling
+        - kitty
+        - fish
         - starship
+        - cheat
+        - btop
+        - fzf
+        - eza
+        - bat
+        - fastfetch
+        - fortune-mod
+        - cowsay
+        - lolcat
+        - cava
+        - nmap
+        - gh
+        
+        # misc bg
         - python
+        - python3-pip # gext
         - rsync
         - syncthing
-        - kitty
-        - starship
-        - zsh
-        - fish
+        - tailscale
+
         - rEFInd
+
+        # virt
         - qemu
         - libvirt
         - virt-manager
         - virt-install
-        - tailscale
 
+        # gnome
         # - gnome-shell-extension-pop-shell
         # - xprop
         - gnome-shell-extension-blur-my-shell
         # - gnome-shell-extension-forge 
-        - python3-pip # gext
         - bibata-cursor-themes
-
-        # - bismuth
-
-        # - ulauncher
-        # - fzf
-        # - btop
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
