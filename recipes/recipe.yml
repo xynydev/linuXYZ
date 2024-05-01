@@ -85,11 +85,6 @@ modules:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
-  - type: containerfile
-    snippets:
-      - COPY --from=ghcr.io/homebrew/core/atuin:18.2.0 /atuin/18.2.0/bin/atuin /usr/bin/atuin
-      - COPY --from=ghcr.io/homebrew/core/atuin:18.2.0 /atuin/18.2.0/share/fish/vendor_completions.d/atuin.fish /usr/share/fish/vendor_completions.d/atuin.fish 
-
   - type: default-flatpaks
     user:
       install:
