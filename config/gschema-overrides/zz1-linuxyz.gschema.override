@@ -2,6 +2,9 @@
 # [org.gnome.shell.extensions.panel-date-format]
 # format = '%b %F %k:%M' # https://docs.gtk.org/glib/method.DateTime.format.html
 
+[org.gnome.mutter]
+dynamic-workspaces = false
+
 [org.gnome.desktop.wm.preferences]
 num-workspaces = 5
 
