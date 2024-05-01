@@ -26,6 +26,10 @@ move-to-workspace-2 = ['<Shift><Super>2']
 move-to-workspace-3 = ['<Shift><Super>3']
 move-to-workspace-4 = ['<Shift><Super>4']
 move-to-workspace-5 = ['<Shift><Super>5', '<Shift><Super>6', '<Shift><Super>7', '<Shift><Super>8', '<Shift><Super>9']
+close = ['<Super>q']
+
+[org.gnome.shell.keybindings]
+show-screenshot-ui = ['KP_Add']
 
 [org.gnome.desktop.interface]
 font-name = 'Outfit 10'
