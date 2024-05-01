@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: linuxyz
 # description will be included in the image's metadata
-description: My personal uBlue image. Make your own! https://ublue.it/making-your-own/
+description: My personal custom image. Make your own! https://blue-build.org/
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-nvidia
