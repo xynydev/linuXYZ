@@ -33,9 +33,9 @@ setup-gnome:
   dconf write /org/gnome/shell/extensions/panel-date-format/format "'%F %R'"
 
   # custom keybinds
-  dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command 'kitty --detach --single-instance'
-  dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name 'terminal'
-  dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding '<Super>Return'
+  dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'kitty --detach --single-instance'"
+  dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'terminal'"
+  dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Super>Return'"
 
 
 workspace-shortcuts:
