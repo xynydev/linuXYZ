@@ -120,6 +120,9 @@ modules:
     system:
       enabled:
         - mount-on-boot.service
+    user:
+      enabled:
+        - syncthing.service
 
   - type: fonts
     source: ghcr.io/blue-build/modules:140-refactor-fonts-module
