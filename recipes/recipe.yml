@@ -151,6 +151,9 @@ modules:
         - JetBrainsMono
         - NerdFontsSymbolsOnly
         - SpaceMono
+        - IBMPlexMono
+        - Iosevka
+        - IosevkaTerm
       google-fonts:
         - Roboto
         - Open Sans
@@ -159,6 +162,7 @@ modules:
         - Space Grotesk
         - Inter
         - Atkinson Hyperlegible
+        - IBM Plex Sans
 
   - type: gschema-overrides
     include:
