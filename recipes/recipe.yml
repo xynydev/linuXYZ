@@ -140,7 +140,6 @@ modules:
         - syncthing.service
 
   - type: fonts
-    source: ghcr.io/blue-build/modules:140-refactor-fonts-module
     fonts:
       nerd-fonts:
         - FiraCode # don't add "Nerd Font" suffix.
