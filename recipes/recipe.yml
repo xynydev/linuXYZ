@@ -37,6 +37,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%OS_VERSION%/peterwu-rendezvous-fedora-%OS_VERSION%.repo # bibata
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://copr.fedorainfracloud.org/coprs/atomic-studio-org/studio-presets/repo/fedora-%OS_VERSION%/atomic-studio-org-studio-presets-fedora-%OS_VERSION%.repo # walls
+      - https://mise.jdx.dev/rpm/mise.repo
     install:
         # editors
         - micro
@@ -58,6 +59,7 @@ modules:
         - cava
         - nmap
         - gh
+        - mise
         
         # misc bg
         - python
