@@ -1,0 +1,7 @@
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+command='kitty --detach --single-instance'
+name='terminal'
+binding='<Super>Return'
+
+[org/gnome/shell/extensions/panel-date-format]
+format='A %b %A (%F) at %R'

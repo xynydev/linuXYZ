@@ -177,4 +177,8 @@ modules:
     include:
       - zz1-linuxyz.gschema.override
 
+  - type: bling
+    install:
+      - dconf-update-service
+
   - type: signing
