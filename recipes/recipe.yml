@@ -25,6 +25,7 @@ modules:
                   # configuration you wish to end up in /etc/ on the booted system
                   # should be added into /usr/etc/ as that is the proper "distro"
                   # config directory on ostree. Read morchoree in the files module's README
+      - 60-custom.just: /usr/share/ublue-os/just/60-custom.just
 
   - type: script
     snippets:
@@ -163,6 +164,14 @@ modules:
         - Inter
         - Atkinson Hyperlegible
         - IBM Plex Sans
+
+  - type: gnome-extensions
+    install:
+      - VitalsCoreCoding.com.v66 # https://extensions.gnome.org/extension/1460/vitals/
+      - gsconnectandyholmes.github.io.v57 # https://extensions.gnome.org/extension/1319/gsconnect/
+      - burn-my-windowsschneegans.github.com.v41 # https://extensions.gnome.org/extension/4679/paperwm/
+      - paperwmpaperwm.github.com.v85 # https://extensions.gnome.org/extension/6099/paperwm/
+      - panel-date-formatkeiii.github.com.v13 # https://extensions.gnome.org/extension/1462/panel-date-format/
 
   - type: gschema-overrides
     include:

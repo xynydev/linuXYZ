@@ -32,9 +32,9 @@ close = ['<Super>q']
 show-screenshot-ui = ['KP_Add']
 
 [org.gnome.desktop.interface]
-font-name = 'Outfit 10'
+font-name = 'Space Grotesk 10'
 monospace-font-name = 'SpaceMono Nerd Font Mono 10'
 cursor-theme = 'Bibata-Modern-Ice'
 
 [org.gnome.desktop.wm.preferences]
-titlebar-font = 'Outfit 11'
+titlebar-font = 'Space Grotesk 11'
