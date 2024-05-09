@@ -61,6 +61,8 @@ modules:
         - nmap
         - gh
         - mise
+        - nodejs
+        - npm
         
         # misc bg
         - python
