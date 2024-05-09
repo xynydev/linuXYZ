@@ -129,6 +129,7 @@ modules:
   - type: script
     scripts:
       - nautilus-open-any-terminal.sh
+      - rounded-window-corners-reborn.sh
       # - rescrobbled.sh
       # - youtube-music-app.sh
       # - refind-catppuccin-theme.sh
