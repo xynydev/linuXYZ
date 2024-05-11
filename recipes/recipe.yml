@@ -53,6 +53,7 @@ modules:
         - fzf
         - eza
         - bat
+        - zoxide
         - fastfetch
         - fortune-mod
         - cowsay
