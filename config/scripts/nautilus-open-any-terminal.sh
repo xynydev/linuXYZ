@@ -12,5 +12,5 @@ cd nautilus-open-any-terminal
 make
 make install schema 
 
-echo "Setting default terminal to kitty"
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty
+echo "Setting default terminal to foot"
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
