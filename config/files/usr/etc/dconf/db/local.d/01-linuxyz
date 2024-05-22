@@ -1,5 +1,5 @@
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
-command='kitty --detach --single-instance'
+command='foot'
 name='terminal'
 binding='<Alt>Return'
 

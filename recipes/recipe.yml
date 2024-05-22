@@ -49,6 +49,7 @@ modules:
 
         # termbling
         - kitty
+        - foot
         - fish
         - starship
         - cheat
@@ -148,6 +149,7 @@ modules:
     user:
       enabled:
         - syncthing.service
+        - foot-server.service
 
   - type: fonts
     fonts:
