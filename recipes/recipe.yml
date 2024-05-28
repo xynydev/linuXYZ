@@ -68,6 +68,7 @@ modules:
         - mise
         - nodejs
         - npm
+        - moby-engine
         
         # misc bg
         - python
