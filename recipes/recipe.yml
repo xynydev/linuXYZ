@@ -171,11 +171,11 @@ modules:
 
   - type: gnome-extensions
     install:
-      - VitalsCoreCoding.com.v66 # https://extensions.gnome.org/extension/1460/vitals/
-      - gsconnectandyholmes.github.io.v57 # https://extensions.gnome.org/extension/1319/gsconnect/
-      - burn-my-windowsschneegans.github.com.v41 # https://extensions.gnome.org/extension/4679/paperwm/
-      - paperwmpaperwm.github.com.v85 # https://extensions.gnome.org/extension/6099/paperwm/
-      - panel-date-formatkeiii.github.com.v13 # https://extensions.gnome.org/extension/1462/panel-date-format/
+      - Vitals # https://extensions.gnome.org/extension/1460/vitals/
+      - GSConnect # https://extensions.gnome.org/extension/1319/gsconnect/
+      - Burn My Windows # https://extensions.gnome.org/extension/4679/burn-my-windows/
+      - PaperWM # https://extensions.gnome.org/extension/6099/paperwm/
+      - Panel Date Format # https://extensions.gnome.org/extension/1462/panel-date-format/
 
   - type: gschema-overrides
     include:
