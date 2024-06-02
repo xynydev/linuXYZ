@@ -175,7 +175,7 @@ modules:
       - GSConnect # https://extensions.gnome.org/extension/1319/gsconnect/
       - Burn My Windows # https://extensions.gnome.org/extension/4679/burn-my-windows/
       - PaperWM # https://extensions.gnome.org/extension/6099/paperwm/
-      - Panel Date Format # https://extensions.gnome.org/extension/1462/panel-date-format/
+      - panel-date-formatkeiii.github.com.v13 # https://extensions.gnome.org/extension/1462/panel-date-format/
 
   - type: gschema-overrides
     include:
