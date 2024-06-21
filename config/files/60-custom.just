@@ -13,6 +13,9 @@ setup-gnome:
   # paperwm
   gext install 6099
 
+  # Gnome 4x UI Improvements
+  gext install 4158
+
   # rounded window corners
   # gext install 5237
 
