@@ -63,6 +63,7 @@ modules:
         - nodejs
         - npm
         - moby-engine
+        - gcc
         
         # misc bg
         - python
