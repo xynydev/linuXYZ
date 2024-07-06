@@ -72,8 +72,6 @@ modules:
         - syncthing
         - tailscale
 
-        - rEFInd
-
         # virt
         - qemu
         - libvirt
