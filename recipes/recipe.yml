@@ -36,8 +36,6 @@ modules:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://copr.fedorainfracloud.org/coprs/atomic-studio-org/studio-presets/repo/fedora-%OS_VERSION%/atomic-studio-org-studio-presets-fedora-%OS_VERSION%.repo # walls
       - https://mise.jdx.dev/rpm/mise.repo
-    optfix:
-      - tabby
     install:
         # editors
         - micro
@@ -73,7 +71,6 @@ modules:
         - rsync
         - syncthing
         - tailscale
-        - https://github.com/Eugeny/tabby/releases/download/v1.0.209/tabby-1.0.209-linux-x64.rpm
 
         # virt
         - qemu
