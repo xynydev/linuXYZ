@@ -15,13 +15,7 @@ image-version: latest # latest is also supported if you want new updates ASAP
 modules:
   - type: files
     files:
-      - usr: /usr # copy static configurations
-                  #
-                  # copies config/files/usr into your image's /usr
-                  #
-                  # configuration you wish to end up in /etc/ on the booted system
-                  # should be added into /usr/etc/ as that is the proper "distro"
-                  # config directory on ostree. Read morchoree in the files module's README
+      - system: /
       - 60-custom.just: /usr/share/ublue-os/just/60-custom.just
 
   - type: script
