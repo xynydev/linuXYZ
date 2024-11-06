@@ -156,6 +156,7 @@ modules:
         - IBMPlexMono
         - Iosevka
         - IosevkaTerm
+        - iA-Writer
       google-fonts:
         - Roboto
         - Open Sans
