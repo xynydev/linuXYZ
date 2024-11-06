@@ -28,61 +28,61 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%OS_VERSION%/peterwu-rendezvous-fedora-%OS_VERSION%.repo # bibata
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-      - https://copr.fedorainfracloud.org/coprs/atomic-studio-org/studio-presets/repo/fedora-%OS_VERSION%/atomic-studio-org-studio-presets-fedora-%OS_VERSION%.repo # walls
+      # - https://copr.fedorainfracloud.org/coprs/atomic-studio-org/studio-presets/repo/fedora-%OS_VERSION%/atomic-studio-org-studio-presets-fedora-%OS_VERSION%.repo # walls
       - https://mise.jdx.dev/rpm/mise.repo
       - https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/repo/fedora-%OS_VERSION%/ryanabx-cosmic-epoch-fedora-%OS_VERSION%.repo
     install:
-        # editors
-        - micro
-        - codium
+      # editors
+      - micro
+      - codium
 
-        # termbling
-        - kitty
-        - foot
-        - fish
-        - starship
-        - cheat
-        - btop
-        - fzf
-        - eza
-        - bat
-        - zoxide
-        - fastfetch
-        - fortune-mod
-        - cowsay
-        - lolcat
-        - cava
-        - nmap
-        - gh
-        - mise
-        - nodejs
-        - npm
-        - moby-engine
-        - gcc
-        
-        # misc bg
-        - python
-        - python3-pip # gext
-        - rsync
-        - syncthing
-        - tailscale
+      # termbling
+      - kitty
+      - foot
+      - fish
+      - starship
+      - cheat
+      - btop
+      - fzf
+      - eza
+      - bat
+      - zoxide
+      - fastfetch
+      - fortune-mod
+      - cowsay
+      - lolcat
+      - cava
+      - nmap
+      - gh
+      - mise
+      - nodejs
+      - npm
+      - moby-engine
+      - gcc
 
-        # virt
-        - qemu
-        - libvirt
-        - virt-manager
-        - virt-install
+      # misc bg
+      - python
+      - python3-pip # gext
+      - rsync
+      - syncthing
+      - tailscale
 
-        # gnome
-        # - gnome-shell-extension-pop-shell
-        # - xprop
-        - gnome-shell-extension-blur-my-shell
-        # - gnome-shell-extension-forge 
-        - bibata-cursor-themes
-        - studio-wallpapers-xyny
+      # virt
+      - qemu
+      - libvirt
+      - virt-manager
+      - virt-install
 
-        # testing out cosmic
-        - cosmic-desktop
+      # gnome
+      # - gnome-shell-extension-pop-shell
+      # - xprop
+      - gnome-shell-extension-blur-my-shell
+      # - gnome-shell-extension-forge
+      - bibata-cursor-themes
+      # - studio-wallpapers-xyny
+
+      # testing out cosmic
+      - cosmic-desktop
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
@@ -124,7 +124,7 @@ modules:
         - org.gtk.Gtk3theme.adw-gtk3-dark
         - org.musicbrainz.Picard
         - org.speedcrunch.SpeedCrunch
-        
+
   - type: script
     scripts:
       - nautilus-open-any-terminal.sh
@@ -174,7 +174,7 @@ modules:
       - PaperWM # https://extensions.gnome.org/extension/6099/paperwm/
       - Gnome 4x UI Improvements # https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/
   - type: gnome-extensions
-    install: 
+    install:
       - panel-date-formatkeiii.github.com.v13 # https://extensions.gnome.org/extension/1462/panel-date-format/
 
   - type: gschema-overrides
