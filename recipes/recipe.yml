@@ -81,6 +81,14 @@ modules:
       - bibata-cursor-themes
       # - studio-wallpapers-xyny
 
+      # testing out hyprland
+      - hyprland
+      - waybar
+      - xdg-desktop-portal-hyprland
+      - hyprpaper
+      - hyprlock
+      - hypridle
+
       # testing out cosmic
       - cosmic-desktop
     remove:
