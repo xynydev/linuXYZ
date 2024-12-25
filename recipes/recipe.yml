@@ -59,6 +59,10 @@ modules:
       - npm
       - moby-engine
       - gcc
+      - libgit2
+
+      # gitbutler
+      - https://releases.gitbutler.com/releases/release/0.14.4-1569/linux/x86_64/GitButler-0.14.4-1.x86_64.rpm
 
       # misc bg
       - python
