@@ -64,6 +64,9 @@ modules:
       # gitbutler
       - https://releases.gitbutler.com/releases/release/0.14.4-1569/linux/x86_64/GitButler-0.14.4-1.x86_64.rpm
 
+      # realtime
+      - realtime-setup
+
       # misc bg
       - python
       - python3-pip # gext
@@ -150,6 +153,9 @@ modules:
     system:
       enabled:
         - mount-on-boot.service
+      masked:
+        # needed for realtime on gnome 45+ according to yabridge readme
+        - rtkit-daemon.service
     user:
       enabled:
         - syncthing.service
