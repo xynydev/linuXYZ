@@ -90,6 +90,8 @@ modules:
       - bibata-cursor-themes
       # - studio-wallpapers-xyny
 
+      - elementary-files
+
       # testing out hyprland
       - hyprland
       - waybar
