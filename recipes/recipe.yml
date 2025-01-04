@@ -31,6 +31,7 @@ modules:
       # - https://copr.fedorainfracloud.org/coprs/atomic-studio-org/studio-presets/repo/fedora-%OS_VERSION%/atomic-studio-org-studio-presets-fedora-%OS_VERSION%.repo # walls
       - https://mise.jdx.dev/rpm/mise.repo
       - https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/repo/fedora-%OS_VERSION%/ryanabx-cosmic-epoch-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
     install:
       # editors
       - micro
@@ -39,6 +40,7 @@ modules:
       # termbling
       - kitty
       - foot
+      - ghostty
       - fish
       - starship
       - cheat
