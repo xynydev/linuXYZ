@@ -111,7 +111,7 @@ modules:
       install:
         - com.brave.Browser
         - com.github.tchx84.Flatseal
-        - hu.kramo.Cartridges
+        - page.kramo.Cartridges
         - io.itch.itch
         # - com.valvesoftware.Steam
         # - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
