@@ -110,7 +110,6 @@ modules:
     user:
       install:
         - com.brave.Browser
-        - com.github.GradienceTeam.Gradience
         - com.github.tchx84.Flatseal
         - hu.kramo.Cartridges
         - io.itch.itch
@@ -138,9 +137,6 @@ modules:
         - org.freedesktop.Piper
         - org.gnome.Loupe
         - org.gnome.World.PikaBackup
-        # - org.gtk.Gtk3theme.Catppuccin-red
-        - org.gtk.Gtk3theme.adw-gtk3
-        - org.gtk.Gtk3theme.adw-gtk3-dark
         - org.musicbrainz.Picard
         - org.speedcrunch.SpeedCrunch
 
