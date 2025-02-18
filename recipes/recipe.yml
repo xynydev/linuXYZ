@@ -107,38 +107,40 @@ modules:
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
   - type: default-flatpaks
-    user:
-      install:
-        - com.brave.Browser
-        - com.github.tchx84.Flatseal
-        - page.kramo.Cartridges
-        - io.itch.itch
-        # - com.valvesoftware.Steam
-        # - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
-        # - io.github.Foldex.AdwSteamGtk
-        - com.usebottles.bottles
-        - org.prismlauncher.PrismLauncher
-        - fr.handbrake.ghb
-        - io.mpv.Mpv
-        - com.logseq.Logseq
-        - md.obsidian.Obsidian
-        - com.obsproject.Studio
-        - com.google.AndroidStudio
-        - com.jetbrains.IntelliJ-IDEA-Community
-        - io.github.dweymouth.supersonic
-        - io.gitlab.librewolf-community
-        - nl.hjdskes.gcolor3
-        - org.audacityteam.Audacity
-        - org.blender.Blender
-        - org.kde.kdenlive
-        - org.shotcut.Shotcut
-        - org.kde.krita
-        - org.fedoraproject.MediaWriter
-        - org.freedesktop.Piper
-        - org.gnome.Loupe
-        - org.gnome.World.PikaBackup
-        - org.musicbrainz.Picard
-        - org.speedcrunch.SpeedCrunch
+    source: ghcr.io/blue-build/modules/default-flatpaks:nu-flatpaks
+    configurations:
+      - scope: user
+        install:
+          - com.brave.Browser
+          - com.github.tchx84.Flatseal
+          - page.kramo.Cartridges
+          - io.itch.itch
+          # - com.valvesoftware.Steam
+          # - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+          # - io.github.Foldex.AdwSteamGtk
+          - com.usebottles.bottles
+          - org.prismlauncher.PrismLauncher
+          - fr.handbrake.ghb
+          - io.mpv.Mpv
+          - com.logseq.Logseq
+          - md.obsidian.Obsidian
+          - com.obsproject.Studio
+          - com.google.AndroidStudio
+          - com.jetbrains.IntelliJ-IDEA-Community
+          - io.github.dweymouth.supersonic
+          - io.gitlab.librewolf-community
+          - nl.hjdskes.gcolor3
+          - org.audacityteam.Audacity
+          - org.blender.Blender
+          - org.kde.kdenlive
+          - org.shotcut.Shotcut
+          - org.kde.krita
+          - org.fedoraproject.MediaWriter
+          - org.freedesktop.Piper
+          - org.gnome.Loupe
+          - org.gnome.World.PikaBackup
+          - org.musicbrainz.Picard
+          - org.speedcrunch.SpeedCrunch
 
   - type: script
     scripts:
