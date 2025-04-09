@@ -64,7 +64,7 @@ modules:
       - libgit2
 
       # gitbutler
-      - https://releases.gitbutler.com/releases/release/0.14.7-1670/linux/x86_64/GitButler-0.14.7-1.x86_64.rpm
+      - https://releases.gitbutler.com/releases/release/0.14.16-1836/linux/x86_64/GitButler-0.14.16-1.x86_64.rpm
 
       # realtime
       - realtime-setup
