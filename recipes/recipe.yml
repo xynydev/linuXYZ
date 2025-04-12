@@ -23,88 +23,82 @@ modules:
       - rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
       - printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h" > /etc/yum.repos.d/vscodium.repo
 
-  - type: rpm-ostree
+  - type: dnf
+    source: ghcr.io/blue-build/modules/dnf:dnf-module
     repos:
-      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/peterwu/rendezvous/repo/fedora-%OS_VERSION%/peterwu-rendezvous-fedora-%OS_VERSION%.repo # bibata
-      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-      # - https://copr.fedorainfracloud.org/coprs/atomic-studio-org/studio-presets/repo/fedora-%OS_VERSION%/atomic-studio-org-studio-presets-fedora-%OS_VERSION%.repo # walls
-      - https://mise.jdx.dev/rpm/mise.repo
-      - https://copr.fedorainfracloud.org/coprs/ryanabx/cosmic-epoch/repo/fedora-%OS_VERSION%/ryanabx-cosmic-epoch-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
+      cleanup: true
+      copr:
+        - atim/starship
+        - pgdev/ghostty
+        - peterwu/rendezvous
+      files:
+        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+        - https://mise.jdx.dev/rpm/mise.repo
     install:
-      # editors
-      - micro
-      - codium
+      package:
+        # editors
+        - micro
+        - codium
 
-      # termbling
-      - kitty
-      - foot
-      - ghostty
-      - fish
-      - starship
-      - cheat
-      - btop
-      - fzf
-      - eza
-      - bat
-      - zoxide
-      - fastfetch
-      - fortune-mod
-      - cowsay
-      - lolcat
-      - cava
-      - nmap
-      - gh
-      - mise
-      - nodejs
-      - npm
-      - moby-engine
-      - gcc
-      - libgit2
+        # term emus
+        - kitty
+        - foot
+        - ghostty
 
-      # gitbutler
-      - https://releases.gitbutler.com/releases/release/0.14.16-1836/linux/x86_64/GitButler-0.14.16-1.x86_64.rpm
+        # termbling
+        - fish
+        - starship
+        - fastfetch
+        - fortune-mod
+        - cowsay
+        - lolcat
+        - cava
 
-      # realtime
-      - realtime-setup
+        # devtools
+        - mise
+        - moby-engine
+        - gcc
+        - libgit2
+        - nmap
 
-      # misc bg
-      - python
-      - python3-pip # gext
-      - rsync
-      - syncthing
-      - tailscale
+        # gitbutler
+        - https://releases.gitbutler.com/releases/release/0.14.16-1836/linux/x86_64/GitButler-0.14.16-1.x86_64.rpm
 
-      # virt
-      - qemu
-      - libvirt
-      - virt-manager
-      - virt-install
+        # realtime
+        - realtime-setup
 
-      # gnome
-      # - gnome-shell-extension-pop-shell
-      # - xprop
-      - gnome-shell-extension-blur-my-shell
-      # - gnome-shell-extension-forge
-      - bibata-cursor-themes
-      # - studio-wallpapers-xyny
+        # misc bg
+        - python
+        - python3-pip # gext
+        - rsync
+        - syncthing
+        - tailscale
 
-      - elementary-files
+        # gnome
+        - gnome-shell-extension-blur-my-shell
 
-      # testing out hyprland
-      - hyprland
-      - waybar
-      - xdg-desktop-portal-hyprland
-      - hyprpaper
-      - hyprlock
-      - hypridle
+        # cursors
+        - repo: copr:copr.fedorainfracloud.org:peterwu:rendezvous
+          packages:
+            - bibata-cursor-themes
 
-      # testing out cosmic
-      - cosmic-desktop
+        - elementary-files
+
+        # testing out hyprland
+        - hyprland
+        - waybar
+        - xdg-desktop-portal-hyprland
+        - hyprpaper
+        - hyprlock
+        - hypridle
+    group-install:
+      packages:
+        - cosmic-desktop
+        - cosmic-desktop-apps
+        - virtualization
     remove:
-      - firefox # default firefox removed in favor of flatpak
-      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      packages:
+        - firefox # default firefox removed in favor of flatpak
 
   - type: default-flatpaks
     source: ghcr.io/blue-build/modules/default-flatpaks:nu-flatpaks
@@ -161,7 +155,6 @@ modules:
     user:
       enabled:
         - syncthing.service
-        - foot-server.service
 
   - type: fonts
     fonts:
