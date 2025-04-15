@@ -26,7 +26,7 @@ modules:
   - type: dnf
     source: ghcr.io/blue-build/modules/dnf:dnf-module
     repos:
-      cleanup: true
+      cleanup: false
       copr:
         - atim/starship
         - pgdev/ghostty
@@ -35,7 +35,7 @@ modules:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://mise.jdx.dev/rpm/mise.repo
     install:
-      package:
+      packages:
         # editors
         - micro
         - codium
