@@ -85,12 +85,12 @@ modules:
         - elementary-files
 
         # testing out hyprland
-        - hyprland
-        - waybar
-        - xdg-desktop-portal-hyprland
-        - hyprpaper
-        - hyprlock
-        - hypridle
+        # - hyprland
+        # - waybar
+        # - xdg-desktop-portal-hyprland
+        # - hyprpaper
+        # - hyprlock
+        # - hypridle
     group-install:
       packages:
         - cosmic-desktop
