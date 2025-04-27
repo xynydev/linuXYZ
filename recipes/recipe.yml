@@ -188,9 +188,7 @@ modules:
       - PaperWM # https://extensions.gnome.org/extension/6099/paperwm/
       - Gnome 4x UI Improvements # https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/
       - Open Bar # https://extensions.gnome.org/extension/6580/open-bar/
-  - type: gnome-extensions
-    install:
-      - panel-date-formatkeiii.github.com.v14 # https://extensions.gnome.org/extension/1462/panel-date-format/
+      - 1462 # https://extensions.gnome.org/extension/1462/panel-date-format/
 
   - type: gschema-overrides
     include:
