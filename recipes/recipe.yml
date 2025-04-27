@@ -41,9 +41,9 @@ modules:
         - codium
 
         # term emus
-        - kitty
+        # - kitty
         - foot
-        - ghostty
+        # - ghostty
 
         # termbling
         - fish
