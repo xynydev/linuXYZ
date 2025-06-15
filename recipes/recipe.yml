@@ -62,7 +62,7 @@ modules:
         - nmap
 
         # gitbutler
-        - https://releases.gitbutler.com/releases/release/0.14.16-1836/linux/x86_64/GitButler-0.14.16-1.x86_64.rpm
+        - https://releases.gitbutler.com/releases/release/0.14.32-2055/linux/x86_64/GitButler-0.14.32-1.x86_64.rpm
 
         # realtime
         - realtime-setup
