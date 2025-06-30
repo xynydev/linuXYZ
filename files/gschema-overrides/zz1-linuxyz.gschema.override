@@ -28,10 +28,10 @@ close = ['<Super>q']
 show-screenshot-ui = ['KP_Add']
 
 [org.gnome.desktop.interface]
-font-name = 'Space Grotesk 10'
+font-name = 'Work Sans 10'
 monospace-font-name = 'SpaceMono Nerd Font Mono 10'
 cursor-theme = 'Bibata-Modern-Ice'
 gtk-theme = "adw-gtk3-dark"
 
 [org.gnome.desktop.wm.preferences]
-titlebar-font = 'Space Grotesk 11'
+titlebar-font = 'Work Sans 11'
