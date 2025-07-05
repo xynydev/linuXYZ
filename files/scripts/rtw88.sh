@@ -8,7 +8,7 @@ cd /tmp
 git clone https://github.com/lwfinger/rtw88
 cd rtw88
 
-KERNELRELEASE=$(uname -r)
+KERNELRELEASE=$(rpm -q kernel | sed -e s/^kernel-//)
 
 make
 make install
