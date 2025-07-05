@@ -2,7 +2,7 @@
 set -oue pipefail
 
 cd /tmp/kernel-rpms
-dnf install -y kernel-devel*
+dnf install -y kernel-devel-matched*
 
 cd /tmp
 git clone https://github.com/lwfinger/rtw88
