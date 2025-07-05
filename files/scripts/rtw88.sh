@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -oue pipefail
 
+rpm -q kernel-headers
+
 cd /tmp
 git clone https://github.com/lwfinger/rtw88
 cd rtw88
