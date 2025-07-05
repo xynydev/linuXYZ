@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 set -oue pipefail
 
-cd /tmp/kernel-rpms
-dnf install -y kernel-devel-matched*
-
 cd /tmp
 git clone https://github.com/lwfinger/rtw88
 cd rtw88
 
-dnf install -y dkms
-
-dkms install $PWD
+make
+make install
 make install_fw
