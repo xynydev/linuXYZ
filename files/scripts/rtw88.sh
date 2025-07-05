@@ -5,7 +5,7 @@ cd /tmp
 git clone https://github.com/lwfinger/rtw88
 cd rtw88
 
-dnf install -y dkms
+dnf install -y kernel-devel kernel-headers dkms
 
 dkms install $PWD
 make install_fw
