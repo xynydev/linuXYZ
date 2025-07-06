@@ -17,4 +17,10 @@ modules:
     scripts:
       - rtw88.sh
 
+  - type: gnome-extensions
+    install:
+      - GSConnect # https://extensions.gnome.org/extension/1319/gsconnect/
+      - PaperWM # https://extensions.gnome.org/extension/6099/paperwm/
+      - 1462 # https://extensions.gnome.org/extension/1462/panel-date-format/
+
   - type: signing
