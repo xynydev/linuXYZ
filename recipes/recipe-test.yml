@@ -41,13 +41,6 @@ modules:
           url: https://nightly.gnome.org/gnome-nightly.flatpakrepo
         install:
           - org.gnome.Epiphany.Devel
-      - scope: user
-        repo:
-          title: Flathub
-          name: flathub
-          url: https://flathub.org/repo/flathub.flatpakrepo
-        install:
-          - org.gimp.GIMP
       - scope: system
         install:
           - io.itch.itch
