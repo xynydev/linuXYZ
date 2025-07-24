@@ -138,6 +138,7 @@ modules:
   - type: script
     scripts:
       - nautilus-open-any-terminal.sh
+      - maplemono.sh
       # - rounded-window-corners-reborn.sh
       # - rescrobbled.sh
       # - youtube-music-app.sh
