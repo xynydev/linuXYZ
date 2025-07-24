@@ -169,6 +169,9 @@ modules:
         - Iosevka
         - IosevkaTerm
         - iA-Writer
+        - 0xProto
+        - AdwaitaMono
+        - Recursive
       google-fonts:
         - Roboto
         - Open Sans
