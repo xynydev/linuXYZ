@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# ^^^ Above line sets up validation in supported editors ^^^
+
+# image will be published to ghcr.io/<user>/<name>
+name: test-flatpaks
+description: My personal custom image. Make your own! https://blue-build.org/
+
+base-image: ghcr.io/ublue-os/silverblue-nvidia
+image-version: latest # latest is also supported if you want new updates ASAP
+
+modules:
+  - type: default-flatpaks
+    source: ghcr.io/blue-build/modules/default-flatpaks:nu-flatpaks
+    configurations:
+      - scope: user
+        install:
+          - com.brave.Browser
+          - com.github.tchx84.Flatseal
+          - page.kramo.Cartridges
+          - org.musicbrainz.Picard
+          - org.speedcrunch.SpeedCrunch
+      - scope: user
+        repo:
+          title: Fedora Flatpaks
+          name: fedora
+          url: oci+https://registry.fedoraproject.org
+        install:
+          - org.mozilla.firefox
+          - org.blender.Blender
+      - scope: user
+        repo:
+          title: Flathub Beta
+          name: flathub-beta
+          url: https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+        install:
+          - org.godotengine.Godot
+      - scope: user
+        repo:
+          title: GNOME Nightly
+          name: gnome-nightly
+          url: https://nightly.gnome.org/gnome-nightly.flatpakrepo
+        install:
+          - org.gnome.Epiphany.Devel
+      - scope: system
+        install:
+          - io.itch.itch
+          - page.codeberg.zynequ.Kapitano
+
+  - type: signing
