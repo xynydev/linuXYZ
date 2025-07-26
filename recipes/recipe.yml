@@ -15,8 +15,10 @@ image-version: latest # latest is also supported if you want new updates ASAP
 modules:
   - type: files
     files:
-      - system: /
-      - 60-custom.just: /usr/share/ublue-os/just/60-custom.just
+      - source: system
+        destination: /
+      - source: 60-custom.just
+        destination: /usr/share/ublue-os/just/60-custom.just
 
   - type: script
     snippets:
