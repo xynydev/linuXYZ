@@ -1,0 +1,193 @@
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+      - source: 60-custom.just
+        destination: /usr/share/ublue-os/just/60-custom.just
+
+  - type: script
+    snippets:
+      - rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
+      - printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h" > /etc/yum.repos.d/vscodium.repo
+
+  - type: dnf
+    repos:
+      cleanup: false
+      copr:
+        - atim/starship
+        - pgdev/ghostty
+        - peterwu/rendezvous
+      files:
+        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+        - https://mise.jdx.dev/rpm/mise.repo
+    install:
+      packages:
+        # editors
+        - micro
+        - codium
+
+        # term emus
+        # - kitty
+        - foot
+        # - ghostty
+
+        # termbling
+        - fish
+        - starship
+        - fastfetch
+        - fortune-mod
+        - cowsay
+        - lolcat
+        - cava
+
+        # devtools
+        - mise
+        - moby-engine
+        - gcc
+        - libgit2
+        - nmap
+
+        # gitbutler
+        - https://releases.gitbutler.com/releases/release/0.15.18-2373/linux/x86_64/GitButler-0.15.18-1.x86_64.rpm
+
+        # realtime
+        - realtime-setup
+
+        # misc bg
+        - python
+        - python3-pip # gext
+        - rsync
+        - syncthing
+        - tailscale
+
+        # gnome
+        - gnome-shell-extension-blur-my-shell
+
+        # cursors
+        - repo: copr:copr.fedorainfracloud.org:peterwu:rendezvous
+          packages:
+            - bibata-cursor-themes
+
+        - elementary-files
+
+        # testing out hyprland
+        # - hyprland
+        # - waybar
+        # - xdg-desktop-portal-hyprland
+        # - hyprpaper
+        # - hyprlock
+        # - hypridle
+    group-install:
+      packages:
+        # - cosmic-desktop
+        # - cosmic-desktop-apps
+        - virtualization
+    remove:
+      packages:
+        - firefox # default firefox removed in favor of flatpak
+
+  - type: default-flatpaks
+    source: ghcr.io/blue-build/modules/default-flatpaks
+    configurations:
+      - scope: user
+        install:
+          - com.brave.Browser
+          - com.github.tchx84.Flatseal
+          - page.kramo.Cartridges
+          - io.itch.itch
+          # - com.valvesoftware.Steam
+          # - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+          # - io.github.Foldex.AdwSteamGtk
+          - com.usebottles.bottles
+          - org.prismlauncher.PrismLauncher
+          - fr.handbrake.ghb
+          - io.mpv.Mpv
+          - com.logseq.Logseq
+          - md.obsidian.Obsidian
+          - com.obsproject.Studio
+          - com.google.AndroidStudio
+          - com.jetbrains.IntelliJ-IDEA-Community
+          - io.github.dweymouth.supersonic
+          - io.gitlab.librewolf-community
+          - nl.hjdskes.gcolor3
+          - org.audacityteam.Audacity
+          - org.blender.Blender
+          - org.kde.kdenlive
+          - org.shotcut.Shotcut
+          - org.kde.krita
+          - org.fedoraproject.MediaWriter
+          - org.freedesktop.Piper
+          - org.gnome.Loupe
+          - org.gnome.World.PikaBackup
+          - org.musicbrainz.Picard
+          - org.speedcrunch.SpeedCrunch
+
+  - type: script
+    scripts:
+      - nautilus-open-any-terminal.sh
+      - maplemono.nu
+      # - rounded-window-corners-reborn.sh
+      # - rescrobbled.sh
+      # - youtube-music-app.sh
+      # - refind-catppuccin-theme.sh
+      # - figma.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - mount-on-boot.service
+      masked:
+        # needed for realtime on gnome 45+ according to yabridge readme
+        - rtkit-daemon.service
+    user:
+      enabled:
+        - syncthing.service
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode # don't add "Nerd Font" suffix.
+        - Hack
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+        - SpaceMono
+        - IBMPlexMono
+        - Iosevka
+        - IosevkaTerm
+        - iA-Writer
+        - 0xProto
+        - AdwaitaMono
+        - Recursive
+      google-fonts:
+        - Roboto
+        - Open Sans
+        - Work Sans
+        - Outfit
+        - Space Grotesk
+        - Inter
+        - Atkinson Hyperlegible
+        - IBM Plex Sans
+        - Vollkorn
+
+  - type: gnome-extensions
+    install:
+      - Vitals # https://extensions.gnome.org/extension/1460/vitals/
+      - GSConnect # https://extensions.gnome.org/extension/1319/gsconnect/
+      - Burn My Windows # https://extensions.gnome.org/extension/4679/burn-my-windows/
+      - PaperWM # https://extensions.gnome.org/extension/6099/paperwm/
+      - Gnome 4x UI Improvements # https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/
+      - Open Bar # https://extensions.gnome.org/extension/6580/open-bar/
+      - 1462 # https://extensions.gnome.org/extension/1462/panel-date-format/
+
+  - type: gschema-overrides
+    include:
+      - zz1-linuxyz.gschema.override
+
+  - type: bling
+    install:
+      - dconf-update-service
+
+  - type: signing

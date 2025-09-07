@@ -2,12 +2,12 @@
 # ^^^ Above line sets up validation in supported editors ^^^
 
 # image will be published to ghcr.io/<user>/<name>
-name: linuxyz
+name: linuxyz-laptop
 # description will be included in the image's metadata
 description: My personal custom image. Make your own! https://blue-build.org/
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-nvidia
+base-image: ghcr.io/ublue-os/silverblue-main
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
