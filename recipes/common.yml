@@ -110,6 +110,7 @@ modules:
           - com.jetbrains.IntelliJ-IDEA-Community
           - io.github.dweymouth.supersonic
           - io.gitlab.librewolf-community
+          - org.mozilla.firefox
           - nl.hjdskes.gcolor3
           - org.audacityteam.Audacity
           - org.blender.Blender
@@ -122,6 +123,10 @@ modules:
           - org.gnome.World.PikaBackup
           - org.musicbrainz.Picard
           - org.speedcrunch.SpeedCrunch
+          - dev.zed.Zed
+          - re.sonny.Junction
+          - page.tesk.Refine
+          - io.github.kolunmi.Bazaar
 
   - type: script
     scripts:
