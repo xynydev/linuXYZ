@@ -196,7 +196,6 @@ modules:
       - dconf-update-service
 
   - type: chezmoi
-    repository: ""
-    disable-init: true
+    repository: "git@github.com:xynydev/dots.git"
 
   - type: signing
