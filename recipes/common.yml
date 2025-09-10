@@ -195,4 +195,7 @@ modules:
     install:
       - dconf-update-service
 
+  - type: chezmoi
+    disable-init: true
+
   - type: signing
