@@ -196,6 +196,7 @@ modules:
       - dconf-update-service
 
   - type: chezmoi
+    repository: ""
     disable-init: true
 
   - type: signing
