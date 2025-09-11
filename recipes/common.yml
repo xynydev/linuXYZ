@@ -127,6 +127,7 @@ modules:
           - re.sonny.Junction
           - page.tesk.Refine
           - io.github.kolunmi.Bazaar
+          - dev.deedles.Trayscale
 
   - type: script
     scripts:
@@ -142,6 +143,7 @@ modules:
     system:
       enabled:
         - mount-on-boot.service
+        - tailscaled.service
       masked:
         # needed for realtime on gnome 45+ according to yabridge readme
         - rtkit-daemon.service
