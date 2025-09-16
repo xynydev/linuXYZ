@@ -6,6 +6,12 @@ modules:
       - source: 60-custom.just
         destination: /usr/share/ublue-os/just/60-custom.just
 
+      # these configuration files live in two different directories?
+      - source: user-dirs
+        destination: /etc/xdg/
+      - source: user-dirs
+        destination: /etc/
+
   - type: script
     snippets:
       - rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
