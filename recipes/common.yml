@@ -69,6 +69,7 @@ modules:
 
         # gnome
         - gnome-shell-extension-blur-my-shell
+        - gnome-tweaks
 
         # cursors
         - repo: copr:copr.fedorainfracloud.org:peterwu:rendezvous
