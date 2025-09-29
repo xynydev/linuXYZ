@@ -185,6 +185,7 @@ modules:
         - Atkinson Hyperlegible
         - IBM Plex Sans
         - Vollkorn
+        - EB Garamond
 
   - type: gnome-extensions
     install:
