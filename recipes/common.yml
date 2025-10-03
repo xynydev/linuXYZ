@@ -54,9 +54,6 @@ modules:
         - libgit2
         - nmap
 
-        # gitbutler
-        - https://releases.gitbutler.com/releases/release/0.15.18-2373/linux/x86_64/GitButler-0.15.18-1.x86_64.rpm
-
         # realtime
         - realtime-setup
 
@@ -140,6 +137,7 @@ modules:
     scripts:
       - nautilus-open-any-terminal.sh
       - maplemono.nu
+      - gitbutler.nu
       # - rounded-window-corners-reborn.sh
       # - rescrobbled.sh
       # - youtube-music-app.sh
