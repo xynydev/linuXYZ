@@ -1,3 +1,5 @@
+#!/usr/libexec/bluebuild/nu/nu
+
 let rpm_url = http get https://app.gitbutler.com/downloads
     | split row "\n"
     | where $it =~ "rpm"
