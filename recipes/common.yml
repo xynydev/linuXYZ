@@ -137,7 +137,7 @@ modules:
     scripts:
       - nautilus-open-any-terminal.sh
       - maplemono.nu
-      - gitbutler.nu
+      # - gitbutler.nu
       # - rounded-window-corners-reborn.sh
       # - rescrobbled.sh
       # - youtube-music-app.sh
