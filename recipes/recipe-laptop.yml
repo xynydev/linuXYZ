@@ -14,6 +14,6 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # you can include multiple instances of the same module
 modules:
   - from-file: common.yml
-  - type: gnome-extensions
-    install:
-      - Smart Auto Move # https://extensions.gnome.org/extension/4736/smart-auto-move/
+  # - type: gnome-extensions
+  #   install:
+  #     - Smart Auto Move # https://extensions.gnome.org/extension/4736/smart-auto-move/
