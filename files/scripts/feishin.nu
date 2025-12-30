@@ -34,3 +34,5 @@ cp /usr/share/feishin/resources/assets/icons/128x128.png /usr/share/icons/hicolo
 cp /usr/share/feishin/resources/assets/icons/64x64.png /usr/share/icons/hicolor/64x64/apps/org.jeffvli.feishin.png
 
 cp /usr/share/feishin/resources/assets/icons/32x32.png /usr/share/icons/hicolor/32x32/apps/org.jeffvli.feishin.png
+
+sudo gtk-update-icon-cache -f -t /usr/share/icons
