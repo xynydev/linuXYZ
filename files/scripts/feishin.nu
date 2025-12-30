@@ -25,4 +25,4 @@ Categories=AudioVideo;Audio;Player;Music;
 Keywords=Navidrome;Jellyfin;Subsonic;OpenSubsonic
 Comment=A player for your self-hosted music server" | save "/usr/share/applications/feishin.desktop"
 
-cp /usr/share/feishin/resources/assets/icons /usr/share/icons/feishin
+cp --recursive /usr/share/feishin/resources/assets/icons /usr/share/icons/feishin
