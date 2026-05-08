@@ -11,7 +11,6 @@ modules:
       - GSConnect # https://extensions.gnome.org/extension/1319/gsconnect/
       - Burn My Windows # https://extensions.gnome.org/extension/4679/burn-my-windows/
       - PaperWM # https://extensions.gnome.org/extension/6099/paperwm/
-      - Open Bar # https://extensions.gnome.org/extension/6580/open-bar/
       - 1462 # https://extensions.gnome.org/extension/1462/panel-date-format/
       - User Themes # https://extensions.gnome.org/extension/19/user-themes/
 
