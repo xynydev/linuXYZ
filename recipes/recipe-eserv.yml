@@ -22,6 +22,7 @@ modules:
       packages:
         - restic
         - mise
-  - type: containerfile
-    snippets:
-      - COPY --from ghcr.io/nushell/nushell:latest-alpine /usr/bin/nu /usr/bin/nu
+  - type: copy
+    from: ghcr.io/nushell/nushell:latest-alpine
+    src: /usr/bin/nu
+    dest: /usr/bin/nu
