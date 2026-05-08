@@ -20,6 +20,8 @@ modules:
           - jdxcode/mise
     install:
       packages:
-        - nu
         - restic
         - mise
+  - type: containerfile
+    snippets:
+      - COPY --from ghcr.io/nushell/nushell:latest-alpine /usr/bin/nu /usr/bin/nu
