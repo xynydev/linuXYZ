@@ -41,3 +41,4 @@ jobs:
           use_unstable_cli: true
           rechunk: false
           maximize_build_space: true
+          build_opts: --run-driver=podman
