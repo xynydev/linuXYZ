@@ -27,3 +27,7 @@ modules:
     from: ghcr.io/nushell/nushell:latest-alpine
     src: /usr/bin/nu
     dest: /usr/bin/nu
+
+platforms:
+  - linux/amd64
+  - linux/arm64
