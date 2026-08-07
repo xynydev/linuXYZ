@@ -23,6 +23,8 @@ modules:
         - restic
         - mise
         - bluez
+        - pipewire
+        - wireplumber
   - type: copy
     from: ghcr.io/nushell/nushell:latest-alpine
     src: /usr/bin/nu
