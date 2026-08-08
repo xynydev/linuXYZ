@@ -25,6 +25,7 @@ modules:
         - bluez
         - pipewire
         - wireplumber
+        - alsa-utils
   - type: copy
     from: ghcr.io/nushell/nushell:latest-alpine
     src: /usr/bin/nu
