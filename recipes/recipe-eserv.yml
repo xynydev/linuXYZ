@@ -24,6 +24,8 @@ modules:
         - mise
         - bluez
         - pipewire
+        - pipewire-pulseaudio
+        - pipewire-alsa
         - wireplumber
         - alsa-utils
   - type: copy
