@@ -28,6 +28,7 @@ modules:
         - pipewire-alsa
         - wireplumber
         - alsa-utils
+        - portaudio
   - type: copy
     from: ghcr.io/nushell/nushell:latest-alpine
     src: /usr/bin/nu
