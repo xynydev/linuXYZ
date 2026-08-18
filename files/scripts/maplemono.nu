@@ -3,7 +3,7 @@
 let variants = http get https://api.github.com/repos/subframe7536/maple-font/releases | get 0 | get assets | where name =~ ".zip"
 
 [
-    "MapleMono-Variable.zip", "MapleMonoNormal-Variable.zip",
+    "MapleMono-VF.zip", "MapleMonoNormal-VF.zip",
     "MapleMono-TTF.zip", "MapleMono-TTF-AutoHint.zip", "MapleMonoNormal-TTF.zip", "MapleMonoNormal-TTF-AutoHint.zip",
     "MapleMono-NF-unhinted.zip", "MapleMono-NF.zip", "MapleMonoNormal-NF-unhinted.zip", "MapleMonoNormal-NF.zip"
 ] | each { |variant| dl_variant $variant }
