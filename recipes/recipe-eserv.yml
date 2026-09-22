@@ -29,6 +29,7 @@ modules:
         - wireplumber
         - alsa-utils
         - portaudio
+        - nmap
   - type: copy
     from: ghcr.io/nushell/nushell:latest-alpine
     src: /usr/bin/nu
