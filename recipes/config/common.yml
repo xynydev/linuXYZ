@@ -64,6 +64,8 @@ modules:
         - bazaar
 
         - nautilus-open-any-terminal
+
+        - https://github.com/Aryan-Raj3112/episteme/releases/download/desktop-v1.0.1/episteme-standard-1.0.1-linux-x86_64.rpm
     group-install:
       packages:
         - virtualization
