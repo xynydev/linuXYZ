@@ -162,7 +162,4 @@ modules:
         - Vollkorn
         - EB Garamond
 
-  - type: chezmoi
-    repository: "git@github.com:xynydev/dots.git"
-
   - type: signing
