@@ -45,7 +45,6 @@ modules:
         - mise
         - moby-engine
         - gcc
-        - libgit2
         - nmap
         - android-tools
 
