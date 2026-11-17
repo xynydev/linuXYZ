@@ -65,7 +65,6 @@ modules:
         - nautilus-open-any-terminal
 
         - https://github.com/Aryan-Raj3112/episteme/releases/download/desktop-v1.0.1/episteme-standard-1.0.1-linux-x86_64.rpm
-        - https://download3.omnissa.com/software/CART27FQ3_LIN64_RPMPKG_2609/Omnissa-Horizon-Client-2609-8.20.0-39006907675.x64.rpm
     group-install:
       packages:
         - virtualization
